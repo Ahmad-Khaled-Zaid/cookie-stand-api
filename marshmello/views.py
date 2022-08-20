@@ -2,17 +2,17 @@ from rest_framework.generics import (
     ListCreateAPIView,
     RetrieveUpdateDestroyAPIView,
 )
-from .models import Thing
+from .models import Marshmello
 from .permissions import IsOwnerOrReadOnly
 from .serializers import ThingSerializer
 
 
-class ThingList(ListCreateAPIView):
-    queryset = Thing.objects.all()
+class MarshmelloList(ListCreateAPIView):
+    queryset = Marshmello.objects.all()
     serializer_class = ThingSerializer
 
 
-class ThingDetail(RetrieveUpdateDestroyAPIView):
+class MarshmelloDetail(RetrieveUpdateDestroyAPIView):
     permission_classes = (IsOwnerOrReadOnly,)
-    queryset = Thing.objects.all()
+    queryset = Marshmello.objects.all()
     serializer_class = ThingSerializer

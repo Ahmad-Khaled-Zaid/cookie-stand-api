@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from .models import Thing
+from .models import Marshmello
 
 
 class ThingSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Thing
+        model = Marshmello
         fields = "__all__"

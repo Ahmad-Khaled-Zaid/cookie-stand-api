@@ -12,7 +12,9 @@ class CustomUserAdmin(UserAdmin):
     list_display = [
         "email",
         "username",
+
     ]
+    readonly_fields = ['date_joined', 'last_login']
 
 
 admin.site.register(CustomUser, CustomUserAdmin)
